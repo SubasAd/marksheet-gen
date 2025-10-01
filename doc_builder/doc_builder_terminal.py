@@ -3,7 +3,7 @@ import docx
 from docx.enum.text import WD_ALIGN_PARAGRAPH
 from datetime import date, datetime
 from .common_functions import *
-
+from config import COMMENTS
 
 def create_marksheet_docx(student_data, terminal_key, school_info, output_filename):
     """
@@ -60,7 +60,7 @@ def create_marksheet_docx(student_data, terminal_key, school_info, output_filena
         row_cells[4].text = str(obtained)
         row_cells[5].text = str(grade)
         row_cells[6].text = str(gp)
-        row_cells[7].text = "" # Remarks column is empty
+        row_cells[7].text =  COMMENTS[grade] # Remarks column is empty
 
     # --- 4. SUMMARY / TOTAL ROW ---
     doc.add_paragraph() # Spacer

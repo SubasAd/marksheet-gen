@@ -2,6 +2,7 @@ import docx
 from docx.shared import Pt, Cm
 from docx.enum.text import WD_ALIGN_PARAGRAPH
 from docx.enum.table import WD_ALIGN_VERTICAL # <-- Import for vertical alignment
+from config import COMMENTS
 
 # Make sure your common_functions.py is in the same directory or a reachable path
 from .common_functions import *
@@ -80,10 +81,11 @@ def create_marksheet_docx(student_data, school_info, output_filename):
         
         # Add the final grade to the second row before merging
         row2_cells[6].text = str(details.get('final_grade', ''))
-
+        row2_cells[7].text = str(COMMENTS[details.get('final_grade','')])
         # --- Merge the vertical cells ---
         row1_cells[0].merge(row2_cells[0])  # Merge S.N.
         row1_cells[6].merge(row2_cells[6])  # Merge Final Grade
+        row1_cells[7].merge(row2_cells[7])
 
         # --- Vertically center the content in merged cells ---
         for cell_index in [0, 6]:

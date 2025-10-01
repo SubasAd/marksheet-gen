@@ -63,7 +63,7 @@ def add_heading_component(student_data, terminal_key, school_info, doc):
     add_logo(school_info, doc)
     add_centered_bold_heading(doc, school_info['name'].upper(), 24)
     add_centered_bold_heading(doc, f"{school_info["address"].upper()}",20)
-    exam_name = terminal_key.replace('_', ' ').title() + ' EXAMINATION'
+    exam_name = terminal_key.replace('_', ' ').title() + f' EXAMINATION - {school_info["exam_year_bs"]}'
     add_centered_bold_heading(doc, f"{exam_name.upper()}", 14)
     add_centered_bold_heading(doc, "GRADE SHEET", 12)
 
