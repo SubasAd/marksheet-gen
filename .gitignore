@@ -1,0 +1,37 @@
+# --- Python junk ---
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Virtual environments
+.venv/
+venv/
+env/
+ENV/
+
+# --- Editor / OS litter ---
+.vscode/
+.idea/
+*.swp
+*.swo
+.DS_Store
+Thumbs.db
+
+# --- Build / export artifacts ---
+# Ignore generated marksheets
+*.docx
+*.pdf
+
+# Ignore accidental Excel outputs
+*.xlsx
+*.xls
+
+# Ignore images unless explicitly whitelisted
+*.png
+*.jpg
+*.jpeg
+
+# --- Keep important resources ---
+!resources/
+!resources/ledger.xlsx
+!resources/image.png
