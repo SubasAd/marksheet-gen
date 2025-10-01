@@ -42,6 +42,7 @@ python ui.py
 │   ├── doc_builder_final.py
 │   └── doc_builder_terminal.py
 ├── excel_reader.py
+├── LISCENSE
 ├── README.md
 ├── requirements.txt
 ├── resources
